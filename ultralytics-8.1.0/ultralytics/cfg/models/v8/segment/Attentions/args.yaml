@@ -1,0 +1,97 @@
+SE: # https://arxiv.org/abs/1709.01507
+  - [-1, 1, SE, [16]]
+
+SEv2: # https://arxiv.org/pdf/2311.10807.pdf
+  - [-1, 1, SaELayer, [32]]
+
+CBAM: # https://openaccess.thecvf.com/content_ECCV_2018/papers/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.pdf
+  - [-1, 1, CBAM, [7]]
+
+BAM: # https://arxiv.org/pdf/1807.06514.pdf
+  # - [-1, 1, BAMBlock, [16, 1]] BUG
+
+ECA: # https://arxiv.org/pdf/1910.03151.pdf
+  - [-1, 1, ECA, [3]]
+
+SimAM: # http://proceedings.mlr.press/v139/yang21o/yang21o.pdf
+  - [-1, 1, SimAM, [1e-4]]
+
+SKAttention: # https://arxiv.org/pdf/1903.06586.pdf
+  - [-1, 1, SKAttention, [[1, 3, 5, 7], 16, 1, 32]]
+
+ShuffleAttention: # https://arxiv.org/pdf/2102.00240.pdf
+  - [-1, 1, ShuffleAttention, [8]]
+
+DoubleAttention: # https://arxiv.org/pdf/1810.11579.pdf
+  - [-1, 1, DoubleAttention, [True]]
+
+CoTAttention: # https://arxiv.org/abs/2107.12292
+  - [-1, 1, CoTAttention, [3]]
+
+EffectiveSE: # https://arxiv.org/abs/1911.06667
+  - [-1, 1, EffectiveSEModule, [False, "hard_sigmoid"]]
+
+GlobalContext: # https://arxiv.org/abs/1904.11492
+  - [-1, 1, GlobalContext, [True, False, True, False, 1./8, None, 1, nn.ReLU, "sigmoid"]]
+
+GatherExcite: # https://arxiv.org/abs/1911.06667
+  - [-1, 1, GatherExcite, [None, False, 0, True, 1./16, None, 1, False, nn.ReLU, nn.BatchNorm2d, "sigmoid"]]
+
+MHSA: # https://arxiv.org/abs/2107.00782
+  - [-1, 1, MHSA, [14, 14, 4, False]]
+
+TripletAttention: # https://arxiv.org/abs/2108.01072
+  - [-1, 1, TripletAttention, [False]]
+
+SpatialGroupEnhance: # https://arxiv.org/pdf/1905.09646.pdf
+  - [-1, 1, SpatialGroupEnhance, [8]]
+
+LSKblock: # https://arxiv.org/pdf/2303.09030.pdf
+  - [-1, 1, LSKblock, []]
+
+EMA:
+  - [-1, 1, EMA, [8]]
+
+AxialImageTransformer:
+  - [-1, 1, AxialImageTransformer, [1]]
+
+HaloAttention:
+  - [-1, 1, HaloAttention, [2, 1]]
+
+StripPooling:
+  - [-1, 1, StripPooling, []]
+
+MultiSpectralAttentionLayer:
+  - [-1, 1, MultiSpectralAttentionLayer, [20, 20]]
+
+# -----------↓ channels = upper layer channels---------------------------
+NAMAttention: # https://arxiv.org/abs/2111.12419
+  - [-1, 1, NAMAttention, [channel]]
+
+ParNetAttention: # https://arxiv.org/abs/2110.07641
+  - [-1, 1, ParNetAttention, [channel]]
+
+S2Attention: # https://arxiv.org/abs/2108.01072
+  - [-1, 1, S2Attention, [channel]]
+
+CrissCrossAttention: # https://arxiv.org/abs/1811.11721
+  - [-1, 1, CrissCrossAttention, [channel]]
+
+CA: # https://arxiv.org/abs/2110.07641
+  - [-1, 1, CoordAtt, [channel, 32]]
+
+GAMAttention: # https://arxiv.org/pdf/2112.05561v1.pdf
+  - [-1, 1, GAMAttention, [channel, True, 4]]
+
+PolarizedSelfAttention: # https://arxiv.org/abs/2107.00782
+  - [-1, 1, ParallelPolarizedSelfAttention, [channel]]
+
+SequentialPolarizedSelfAttention: # https://arxiv.org/abs/2107.00782
+  - [-1, 1, SequentialPolarizedSelfAttention, [channel]]
+
+iRMB:
+  - [-1, 1, iRMB, [channel]]
+
+PSAModule:
+  - [-1, 1, PSAModule, [channel]]
+# -----------↑ channels = upper layer channels---------------------------
